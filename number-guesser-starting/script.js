@@ -2,34 +2,34 @@ let humanScore = 0;
 let computerScore = 0;
 let currentRoundNumber = 1;
 
-// Write your code below:
-
 const generateTarget = () => {
-    return Math.floor(Math.random() * 10)
-}
-const compareGuesses = (user, computer, target) => {
-    target = generateTarget();
-    if (computer === target) {
-        return 'Computer Won!';
+    return Math.floor(Math.random() * 10);
+};
+
+const compareGuesses = (user, computer) => {
+    const target = generateTarget();
+    
+    if (Math.abs(user - target) <= Math.abs(computer - target)) {
+        return 'You Win!';
+    } else {
+        return 'Computer Wins!';
     }
-    else if ((computer > target) && (user > computer)){
-        return 'Computer Won!';
-    }
-    else if ((computer < target) && (user < computer)){
-        return 'Computer Won!';
-    }
-    else {
-        return 'You Win!'
-    }
-}
+};
+
 const updateScore = (winner) => {
     if (winner === 'human') {
         humanScore++;
-    }
-    else if (winner === 'computer') {
+    } else if (winner === 'computer') {
         computerScore++;
     }
-}
+};
+
 const advanceRound = () => {
     currentRoundNumber++;
-}
+};
+
+const checkUserGuess = (guess) => {
+    if (guess < 0 || guess > 9) {
+        return 'You are out of range. Guess needs to be between 0 and 9.';
+    }
+};
