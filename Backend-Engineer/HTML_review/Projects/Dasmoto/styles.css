@@ -1,0 +1,54 @@
+.header{
+    height: 120px;
+    background-image: url(./src/pattern.webp);
+    margin-bottom: 70px;
+    
+}
+
+.header > h1{
+    font-size: 100px;
+    font-family: Helvetica;
+    color:khaki;
+    text-align: center;
+    font-weight: bold
+}
+/* All sections styles */
+section{
+    margin: 2rem 0rem;
+}
+.section-1 > div, 
+.section-2 > div, 
+.section-3 > div {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    margin: 2rem 0rem;
+}
+
+/* Section-1 */
+
+.section-1 > div {
+    background-color: mediumspringgreen;
+}
+
+
+
+
+
+
+
+.section-2 > div {
+    background-color: lightcoral;
+}
+
+
+
+
+
+
+
+.section-3 > div {
+    background-color: skyblue;
+}
