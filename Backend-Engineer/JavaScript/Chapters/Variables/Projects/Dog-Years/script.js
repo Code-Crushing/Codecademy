@@ -11,3 +11,7 @@ console.log(laterYears);
 let myAgeInDogYears = laterYears + earlyYears;
 const myName = 'Fahd'.toLowerCase();
 console.log(`My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog yeears.`);
+let mood = 'sleepy';
+let tirednessLevel = 6;
+
+c
