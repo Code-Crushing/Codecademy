@@ -11,16 +11,19 @@ const generateTarget = () =>{
 console.log(generateTarget());
 
 const compareGuesses = (randomGuess, userGuess, computerGuess) =>{
-    let 
+    let userDivid = randomGuess - userGuess;
+    let computerDivid = randomGuess - computerGuess;
+    userDivid = Math.abs(userDivid);
+    computerDivid = Math.abs(computerDivid);
     if(userGuess === computerGuess){
         return true;
-    } else if (randomGuess - userGuess < randomGuess - computerGuess){
+    } else if ( userDivid < computerDivid){
         return `${true} case of user input is near the target`;
     
-    } else if (randomGuess - userGuess > randomGuess - computerGuess){
+    } else if (userDivid > computerDivid){
         return false;
     
-    } else if (randomGuess - userGuess >= randomGuess - computerGuess){
+    } else if (userDivid >= computerDivid){
         return `${false}  case of equality`;
     }
 }
