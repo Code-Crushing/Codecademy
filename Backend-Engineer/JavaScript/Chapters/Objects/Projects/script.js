@@ -1,13 +1,10 @@
-let spaceship = {
-    'Fuel Type' : 'Turbo Fuel',
-    homePlanet : 'Earth'
-  };
-  
-  // Write your code below
-  const greenEnergy = (obj)=>{
-    obj['Fuel Type'] = 'avocado oil'
+const monsterFactory = (name, age, energySource, catchPhrase) => {
+  return { 
+    name: name,
+    age: age, 
+    energySource: energySource,
+    scare() {
+      console.log(catchPhrase);
+    } 
   }
-  const remotelyDisable = (obj)=>{
-    obj.disabled = true;
-  }
-  remotelyDisable(spaceship)
+};
